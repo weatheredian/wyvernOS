@@ -2,8 +2,8 @@
 # yaml-language-server: $schema=https://schema.blue-build.org/recipe-v1.json
 # image will be published to ghcr.io/<user>/<name>
 
-name: wyvernOS
-description: wyvernOS, build immutable ISO
+name: dummy-os
+description: dummy-os started on oct30 to test immutable iso
 base-image: ghcr.io/ublue-os/silverblue-main
 image-version: 42
 modules:
@@ -31,6 +31,18 @@ modules:
         - SoapySDR
         - wireshark
         - wireshark-cli
+        - aircrack-ng
+        - gnuradio
+        - urh
+        - gpsd
+        - gqrx
+        - soapy-rtlsdr
+        - SoapySDR
+        - hackrf
+        - qflipper
+        - ubertooth
+
+
   - type: default-flatpaks
     configurations:
       - scope: user
