@@ -1,0 +1,72 @@
+---
+# yaml-language-server: $schema=https://schema.blue-build.org/recipe-v1.json
+# image will be published to ghcr.io/<user>/<name>
+name: dummy-os
+# description will be included in the image's metadata
+description: dummy-os started on oct30 to test immutable iso
+
+# the base image to build on top of (FROM) and the version tag to use
+base-image: ghcr.io/ublue-os/silverblue-main
+image-version: 42 # latest is also supported if you want new updates ASAP
+
+# module configuration, executed in order
+# you can include multiple instances of the same module
+modules:
+  - type: files
+    files:
+      - source: system
+        destination: / # copies files/system/* (* means everything inside it) into your image's root folder /
+
+  - type: dnf
+    repos:
+      copr:
+        - atim/starship
+    install:
+      packages:
+        - micro
+        - starship
+        - neovim
+        - fastfetch
+        - kismet
+        - volk
+        - kitty
+        - firefox
+    # remove:
+      # packages:
+        # example: removing firefox (in favor of the flatpak)
+        # "firefox" is the main package, "firefox-langpacks" is a dependency
+        # - firefox
+        # - firefox-langpacks # also remove firefox dependency (not required for all packages, this is a special case)
+
+  # - from-file: common-flatpaks.yml
+
+  # - type: default-flatpaks
+  #   configurations:
+  #     - notify: true # Send notification after install/uninstall is finished (true/false)
+  #       scope: system
+  #       # If no repo information is specified, Flathub will be used by default
+  #       install: # system flatpaks we want all users to have and not remove
+  #         #- org.mozilla.firefox
+  #         - org.gnome.Loupe
+  #         - app.zen_browser.zen
+  #     - scope: user # Also add Flathub user repo, but no user packages
+
+  - type: default-flatpaks
+    configurations:
+      - scope: user
+        repo:
+          # you can override the title to make inclusion of both system and user repos clearer
+          title: Flathub (user)
+      - notify: true
+        scope: system
+        repo:
+          title: Flathub (system)
+        install: # system flatpaks we want all users to have and not remove
+          - org.mozilla.firefox
+          - com.github.tchx84.Flatseal
+          - io.github.flattool.Warehouse
+          - io.missioncenter.MissionCenter
+          - com.github.rafostar.Clapper
+          - org.gnome.Loupe
+
+  - type: signing # this sets up the proper policy & signing files for signed images to work fully
