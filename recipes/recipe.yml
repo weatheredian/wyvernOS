@@ -2,8 +2,8 @@
 # yaml-language-server: $schema=https://schema.blue-build.org/recipe-v1.json
 # image will be published to ghcr.io/<user>/<name>
 
-name: dummy-os
-description: dummy-os started on oct30 to test immutable iso
+name: wyvernOS
+description: immutable SDR system
 base-image: ghcr.io/ublue-os/silverblue-main
 image-version: 42
 modules:
