@@ -77,7 +77,6 @@ modules:
           - com.github.rafostar.Clapper
           - org.gnome.Loupe
           - app.zen_browser.zen
-  - from-file: ../modules/grgsm/gr-builder.yml
 
   - type: signing
 
