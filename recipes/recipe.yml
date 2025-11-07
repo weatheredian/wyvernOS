@@ -6,6 +6,25 @@ name: wyvernOS
 description: immutable SDR system
 base-image: ghcr.io/ublue-os/silverblue-main
 image-version: 42
+
+stages:
+  - name: gr-gsm
+    from: ubuntu:16.04
+    modules:
+      - type: script
+        snippets:
+          - apt-get update && apt-get install -y git
+          - apt-get install -y cmake autoconf libtool pkg-config build-essential python-docutils libcppunit-dev swig doxygen liblog4cpp5-dev python-scipy python-gtk2 gnuradio-dev gr-osmosdr libosmocore-dev
+          - git clone https://gitea.osmocom.org/sdr/gr-gsm
+          - cd gr-gsm
+          - mkdir build
+          - cd build
+          - cmake ..
+          - mkdir $HOME/.grc_gnuradio/ $HOME/.gnuradio/
+          - make
+          - sudo make install 
+          - sudo ldconfig
+
 modules:
   - type: files
     files:
@@ -42,7 +61,6 @@ modules:
         - qflipper
         - ubertooth
 
-
   - type: default-flatpaks
     configurations:
       - scope: user
@@ -60,5 +78,10 @@ modules:
           - com.github.rafostar.Clapper
           - org.gnome.Loupe
           - app.zen_browser.zen
+  - type: copy
+    from: gr-gsm
+    src: .gnuradio/
+    dest: /etc/WS-extra/
+
   - type: signing
 
