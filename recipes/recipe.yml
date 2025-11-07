@@ -7,23 +7,22 @@ description: immutable SDR system
 base-image: ghcr.io/ublue-os/silverblue-main
 image-version: 42
 
-stages:
-  - name: gr-gsm
-    from: ubuntu:16.04
+stage:
+  - name: gr-gsm-builder
+    from: ubuntu:20.04
     modules:
       - type: script
-        snippets:
-          - apt-get update && apt-get install -y git
-          - apt-get install -y cmake autoconf libtool pkg-config build-essential python-docutils libcppunit-dev swig doxygen liblog4cpp5-dev python-scipy python-gtk2 gnuradio-dev gr-osmosdr libosmocore-dev
+        snippets: 
+          - apt-get update && apt-get install -y cmake autoconf libtool pkg-config build-essential libcppunit-dev swig doxygen liblog4cpp5-dev python3-docutils python3-scipy gnuradio-dev liborc-dev libosmocore-dev gr-osmosdr
           - git clone https://gitea.osmocom.org/sdr/gr-gsm
           - cd gr-gsm
           - mkdir build
-          - cmake .
-          - mkdir $HOME/.grc_gnuradio/ $HOME/.gnuradio/
           - cd build
-          - make
-          - sudo make install 
-          - sudo ldconfig
+          - cmake ..
+          - mkdir $HOME/.grc_gnuradio/ $HOME/.gnuradio/
+          - make -j $(nproc)
+          - ldconfig
+          - make CTEST_OUTPUT_ON_FAILURE=1 test
 
 modules:
   - type: files
@@ -78,10 +77,7 @@ modules:
           - com.github.rafostar.Clapper
           - org.gnome.Loupe
           - app.zen_browser.zen
-  - type: copy
-    from: gr-gsm
-    src: .gnuradio/
-    dest: /etc/WS-extra/
+  - from-file: ../modules/grgsm/gr-builder.yml
 
   - type: signing
 
