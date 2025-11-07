@@ -7,7 +7,7 @@ description: immutable SDR system
 base-image: ghcr.io/ublue-os/silverblue-main
 image-version: 42
 
-stage:
+stages:
   - name: gr-gsm-builder
     from: ubuntu:20.04
     modules:
