@@ -13,7 +13,7 @@ stages:
     modules:
       - type: script
         snippets: 
-          - apt-get update && apt-get install -y cmake autoconf libtool pkg-config build-essential libcppunit-dev swig doxygen liblog4cpp5-dev python3-docutils python3-scipy gnuradio-dev liborc-dev libosmocore-dev gr-osmosdr
+          - apt-get install -y cmake autoconf libtool pkg-config build-essential libcppunit-dev swig doxygen liblog4cpp5-dev python3-docutils python3-scipy gnuradio-dev liborc-dev libosmocore-dev gr-osmosdr
           - git clone https://gitea.osmocom.org/sdr/gr-gsm
           - cd gr-gsm
           - mkdir build
