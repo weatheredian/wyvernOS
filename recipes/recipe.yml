@@ -21,7 +21,7 @@ stages:
           - cd /src/build
           - cmake ..
           - mkdir $HOME/.grc_gnuradio/ $HOME/.gnuradio/
-          - make -j $(nproc)
+          - make
           - ldconfig
           - make CTEST_OUTPUT_ON_FAILURE=1 test
           - echo "finished build"
