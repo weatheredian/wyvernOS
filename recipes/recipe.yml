@@ -18,7 +18,7 @@ stages:
           - git clone https://gitea.osmocom.org/sdr/gr-gsm
           - cd gr-gsm
           - mkdir build
-          - cmake
+          - cmake .
           - mkdir $HOME/.grc_gnuradio/ $HOME/.gnuradio/
           - cd build
           - make
