@@ -14,12 +14,17 @@ stages:
       - type: script
         snippets: 
           - DEBIAN_FRONTEND=noninteractive apt-get install -y git cmake autoconf libtool pkg-config build-essential libcppunit-dev swig doxygen liblog4cpp5-dev python3-docutils python3-scipy gnuradio-dev liborc-dev libosmocore-dev gr-osmosdr
+          - pwd
           - git clone https://gitea.osmocom.org/sdr/gr-gsm
           - cd gr-gsm
+          - pwd
           - mkdir build
           - cd build
+          - pwd
           - cmake ..
+          - pwd
           - mkdir $HOME/.grc_gnuradio/ $HOME/.gnuradio/
+          - pwd
           - make
           - ldconfig
           - make CTEST_OUTPUT_ON_FAILURE=1 test
