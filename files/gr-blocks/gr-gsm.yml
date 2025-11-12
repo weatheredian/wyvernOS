@@ -9,5 +9,5 @@ modules:
   - type: copy
     from: grgsm
     src: /src/build
-    dest: /usr/bin/
+    dest: /usr/bin/grgsm/
 
