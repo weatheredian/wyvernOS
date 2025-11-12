@@ -16,8 +16,8 @@ stages:
           - DEBIAN_FRONTEND=noninteractive apt-get install -y git cmake autoconf libtool pkg-config build-essential libcppunit-dev swig doxygen liblog4cpp5-dev python3-docutils python3-scipy gnuradio-dev liborc-dev libosmocore-dev gr-osmosdr
           - git clone https://gitea.osmocom.org/sdr/gr-gsm
           - cd gr-gsm
-          - mkdir /src/build
-          - cd /src/build
+          - mkdir build
+          - cd build
           - cmake ..
           - mkdir $HOME/.grc_gnuradio/ $HOME/.gnuradio/
           - make
