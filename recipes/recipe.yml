@@ -60,8 +60,5 @@ modules:
           - com.github.rafostar.Clapper
           - org.gnome.Loupe
           - app.zen_browser.zen
-  - type: containerfile
-    containerfiles: 
-      - grgsm
   - type: signing
 
