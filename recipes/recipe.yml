@@ -8,7 +8,7 @@ base-image: ghcr.io/ublue-os/silverblue-main
 image-version: 42
 
 stages:
-  - from-file: files/gr-blocks/gr-gsm.yml
+  - from-file: ../files/gr-blocks/gr-gsm.yml
 
 modules:
   - type: files
