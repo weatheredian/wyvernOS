@@ -18,10 +18,11 @@ apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y \
     liborc-dev \
     libosmocore-dev \
     gr-osmosdr
-
+pwd
 cp ./ /src/
-mkdir /src/build
+mkdir -p /src/build
 cd /src/build
+pwd
 
 cmake .. && \
     # The parallel build sometimes fails when the .grc_gnuradio

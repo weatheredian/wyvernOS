@@ -8,6 +8,6 @@ stages:
 modules:
   - type: copy
     from: grgsm
-    src: /src/build
+    src: /src/build/
     dest: /usr/bin/grgsm/
 
