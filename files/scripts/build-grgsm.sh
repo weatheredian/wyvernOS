@@ -1,7 +1,8 @@
-FROM ubuntu:20.04
-MAINTAINER Piotr Krysik
+#!/usr/bin/env bash
 
-RUN apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y \
+set -euo pipefail
+
+apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y \
     cmake \
     autoconf \
     libtool \
@@ -18,11 +19,11 @@ RUN apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y \
     libosmocore-dev \
     gr-osmosdr
 
-COPY ./ /src/
-RUN mkdir /src/build
-WORKDIR /src/build
+cp ./ /src/
+mkdir /src/build
+cd /src/build
 
-RUN cmake .. && \
+cmake .. && \
     # The parallel build sometimes fails when the .grc_gnuradio
     # and .gnuradio directories do not exist
     mkdir $HOME/.grc_gnuradio/ $HOME/.gnuradio/ && \

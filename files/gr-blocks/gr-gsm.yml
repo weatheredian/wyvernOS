@@ -1,0 +1,17 @@
+stages:
+  - name: grgsm
+    from: ubuntu:20.04
+    modules:
+      - type: script
+        scripts:
+          - build-grgsm.sh
+# modules:
+#   - type: copy
+#     from: helix
+#     src: /out/hx
+#     dest: /usr/bin/
+#   - type: copy
+#     from: helix
+#     src: /out/runtime/
+#     dest: /usr/lib/helix/runtime
+# 
