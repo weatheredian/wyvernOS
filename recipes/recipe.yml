@@ -7,26 +7,6 @@ description: immutable SDR system
 base-image: ghcr.io/ublue-os/silverblue-main
 image-version: 42
 
-stages:
-  - name: gr-gsm-builder
-    from: ubuntu:20.04
-    modules:
-      - type: script
-        snippets: 
-          - DEBIAN_FRONTEND=noninteractive apt-get install -y git cmake autoconf libtool pkg-config build-essential libcppunit-dev swig doxygen liblog4cpp5-dev python3-docutils python3-scipy gnuradio-dev liborc-dev libosmocore-dev gr-osmosdr
-          - RUN git clone https://gitea.osmocom.org/sdr/gr-gsm
-          - WORKDIR gr-gsm
-          - RUN mkdir build
-          - WORKDIR build
-          - RUN cmake ..
-          - RUN mkdir $HOME/.grc_gnuradio/ $HOME/.gnuradio/
-          - RUN make
-          - RUN ldconfig
-          - RUN make CTEST_OUTPUT_ON_FAILURE=1 test
-          - RUN echo "finished build"
-          - RUN ls $HOME/.grc_gnuradio/
-          - RUN ls $HOME/.gnuradio
-
 modules:
   - type: files
     files:
