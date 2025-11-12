@@ -60,14 +60,8 @@ modules:
           - com.github.rafostar.Clapper
           - org.gnome.Loupe
           - app.zen_browser.zen
-  - type: copy
-    from: gr-gsm-builder
-    src: $HOME/.grc_gnuradio/
-    dest: /etc/WS-extra/grgsmout/grc_gnuradio
-  - type: copy
-    from: gr-gsm-builder
-    src: $HOME/.gnuradio/
-    dest: /etc/WS-extra/grgsmout/gnuradio
-
+  - type: containerfile
+    containerfiles: 
+      - grgsm
   - type: signing
 
