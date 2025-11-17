@@ -20,7 +20,6 @@ stages:
       - type: script
         scripts:
           - build-blue-hydra.sh
-        snippets: mkdir -p /out/ && mv /src/blue_hydra /out/blue_hydra
 
 modules:
   - type: files
@@ -64,7 +63,7 @@ modules:
 
   - type: copy
     from: blue-hydra
-    src: /out/blue_hydra/
+    src: /src/blue_hydra/
     dest: /usr/bin/
 
   - type: default-flatpaks
