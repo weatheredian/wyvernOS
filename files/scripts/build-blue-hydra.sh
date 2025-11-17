@@ -11,7 +11,7 @@ apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y \
   sqlite3 \
   libsqlite3-dev
 
-apt-get install ruby-dev bundler
+apt-get install -y ruby-dev bundler
 
 git clone https://github.com/ZeroChaos-/blue_hydra.git
 cp -r blue_hydra /src/blue_hydra
