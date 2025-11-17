@@ -17,7 +17,10 @@ apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y \
   gnuradio-dev \
   liborc-dev \
   libosmocore-dev \
-  gr-osmosdr
+  gr-osmosdr \
+  git
+git clone https://github.com/ptrkrysik/gr-gsm.git
+cd gr-gsm
 pwd
 cp -r ./ /src/
 mkdir -p /src/build
