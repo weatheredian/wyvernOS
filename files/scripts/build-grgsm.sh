@@ -20,9 +20,8 @@ apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y \
   gr-osmosdr \
   git
 git clone https://github.com/ptrkrysik/gr-gsm.git
-cd gr-gsm
 pwd
-cp -r ./ /src/
+cp -r gr-gsm/ /src/
 mkdir -p /src/build
 cd /src/build
 pwd
