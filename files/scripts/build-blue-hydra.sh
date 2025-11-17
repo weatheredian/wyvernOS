@@ -15,6 +15,7 @@ apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y \
 apt-get install -y ruby-dev bundler
 
 git clone https://github.com/ZeroChaos-/blue_hydra.git
+mkdir -p /src/blue_hydra
 cp -r blue_hydra /src/blue_hydra
 cd /src/blue_hydra
 bundler install
