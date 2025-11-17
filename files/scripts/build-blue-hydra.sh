@@ -16,7 +16,7 @@ apt-get install -y ruby-dev bundler
 
 git clone https://github.com/ZeroChaos-/blue_hydra.git
 mkdir -p /src/blue_hydra
-cp -r blue_hydra /src/blue_hydra
+cp -r blue_hydra /src/
 cd /src/blue_hydra
 pwd && ls
 bundler install
