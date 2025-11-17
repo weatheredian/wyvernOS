@@ -8,7 +8,12 @@ base-image: ghcr.io/ublue-os/silverblue-main
 image-version: 42
 
 stages:
-  - from-file: ../files/gr-blocks/gr-gsm.yml
+  - name: gr-gsm
+    from: ubuntu:20.04
+    modules:
+      - type: script
+        scripts:
+          - build-grgsm.sh
 
 modules:
   - type: files
@@ -65,3 +70,7 @@ modules:
           - app.zen_browser.zen
   - type: signing
 
+  - type: copy
+    from: gr-gsm
+    src: /src/
+    dest: /usr/bin/
