@@ -20,7 +20,7 @@ modules:
     files:
       - source: system
         destination: /
-  - type: rpm-ostree
+  - type: dnf
     repos:
       copr:
         - atim/starship
