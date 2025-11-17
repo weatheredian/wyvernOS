@@ -9,7 +9,8 @@ apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y \
   python3-dbus \
   ubertooth \
   sqlite3 \
-  libsqlite3-dev
+  libsqlite3-dev \
+  git
 
 apt-get install -y ruby-dev bundler
 
