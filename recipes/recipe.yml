@@ -14,6 +14,12 @@ stages:
       - type: script
         scripts:
           - build-grgsm.sh
+  - name: blue-hydra
+    from: ubuntu:22.04
+    modules:
+      - type: script
+        scripts:
+          - build-blue-hydra.sh
 
 modules:
   - type: files
@@ -50,6 +56,15 @@ modules:
         - hackrf
         - qflipper
         - ubertooth
+  - type: copy
+    from: gr-gsm
+    src: /src/
+    dest: /usr/bin/
+
+  - type: copy
+    from: blue-hydra
+    src: /src/blue-hydra
+    dest: /usr/bin/
 
   - type: default-flatpaks
     configurations:
@@ -70,7 +85,3 @@ modules:
           - app.zen_browser.zen
   - type: signing
 
-  - type: copy
-    from: gr-gsm
-    src: /src/
-    dest: /usr/bin/
