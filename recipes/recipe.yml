@@ -68,7 +68,8 @@ modules:
     src: /out/blue-hydra
     dest: /usr/bin/
 
-  configurations:
+  - type: default-flatpaks
+    configurations:
       - scope: user
         repo:
           title: Flathub (user)
