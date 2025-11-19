@@ -18,6 +18,8 @@ stages:
     from: ubuntu:22.04
     modules:
       - type: script
+        snippets:
+          - mkdir -p /out/ && mv /src/blue-hydra/ /out/   #copy script src to /out/
         scripts:
           - build-blue-hydra.sh
 
@@ -63,14 +65,9 @@ modules:
 
   - type: copy
     from: blue-hydra
-    src: /src/blue_hydra/
+    src: /out/blue-hydra
     dest: /usr/bin/
 
-  - type: script
-    scripts:
-      - build-blue-hydra.sh
-
-  - type: default-flatpaks
     configurations:
       - scope: user
         repo:
