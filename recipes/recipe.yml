@@ -66,6 +66,10 @@ modules:
     src: /src/blue_hydra/
     dest: /usr/bin/
 
+  - type: script
+    scripts:
+      - build-blue-hydra.sh
+
   - type: default-flatpaks
     configurations:
       - scope: user
