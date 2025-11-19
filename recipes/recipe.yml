@@ -58,6 +58,7 @@ modules:
         - hackrf
         - qflipper
         - ubertooth
+        - ruby
   - type: copy
     from: gr-gsm
     src: /src/
