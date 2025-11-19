@@ -19,7 +19,7 @@ stages:
     modules:
       - type: script
         snippets:
-          - mkdir -p /out/ && mv /src/ /out/   #copy script src to /out/
+          - mkdir -p /out/blue-hydra/ && mv /src/ /out/blue-hydra/   #copy script src to /out/
         scripts:
           - build-blue-hydra.sh
 
