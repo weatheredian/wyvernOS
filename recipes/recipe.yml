@@ -59,7 +59,6 @@ modules:
         - qflipper
         - ubertooth
         - ruby
-        - ruby-dev
         - rubygem-sqlite3
   - type: copy
     from: gr-gsm
