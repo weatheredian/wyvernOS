@@ -63,6 +63,7 @@ modules:
         - gedit
         - proxmark3
         - rpi-imager
+        - btop
   - type: copy
     from: gr-gsm
     src: /src/
