@@ -62,6 +62,7 @@ modules:
         - rubygem-sqlite3
         - gedit
         - proxmark3
+        - rpi-imager
   - type: copy
     from: gr-gsm
     src: /src/
