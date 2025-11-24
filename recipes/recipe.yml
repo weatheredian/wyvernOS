@@ -12,6 +12,8 @@ stages:
     from: ubuntu:20.04
     modules:
       - type: script
+        snippets:
+          - mkdir -p /out/ && mv /src/ /out/gr-gsm
         scripts:
           - build-grgsm.sh
   - name: blue-hydra
@@ -77,7 +79,7 @@ modules:
         - docker-compose
   - type: copy
     from: gr-gsm
-    src: /src/
+    src: /out/gr-gsm
     dest: /usr/bin/
 
   - type: copy
