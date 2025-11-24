@@ -60,6 +60,7 @@ modules:
         - ubertooth
         - ruby
         - rubygem-sqlite3
+        - gedit
   - type: copy
     from: gr-gsm
     src: /src/
