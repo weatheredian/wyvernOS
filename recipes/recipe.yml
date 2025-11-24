@@ -61,6 +61,7 @@ modules:
         - ruby
         - rubygem-sqlite3
         - gedit
+        - proxmark3
   - type: copy
     from: gr-gsm
     src: /src/
