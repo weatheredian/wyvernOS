@@ -72,6 +72,8 @@ modules:
         - proxmark3
         - rpi-imager
         - btop
+        - docker-buildx
+        - docker-compose
   - type: copy
     from: gr-gsm
     src: /src/
