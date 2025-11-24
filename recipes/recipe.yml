@@ -68,6 +68,7 @@ modules:
         - ubertooth
         - ruby
         - rubygem-sqlite3
+        - rubygem-bundler
         - gedit
         - proxmark3
         - rpi-imager
