@@ -87,10 +87,10 @@ modules:
     src: /out/blue-hydra
     dest: /usr/bin/
 
-  - type: copy
-    from: gr-iridium
-    src: /out/gr-iridium
-    dest: /usr/bin/
+  #- type: copy
+   # from: gr-iridium
+    #src: /out/gr-iridium
+    #dest: /usr/bin/
 
   - type: default-flatpaks
     configurations:
