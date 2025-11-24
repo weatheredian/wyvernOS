@@ -66,6 +66,12 @@ modules:
         - hackrf
         - qflipper
         - ubertooth
+        - ruby
+        - rubygem-sqlite3
+        - gedit
+        - proxmark3
+        - rpi-imager
+        - btop
   - type: copy
     from: gr-gsm
     src: /src/
