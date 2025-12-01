@@ -12,7 +12,7 @@ apt install -y uhd-host
 uhd_images_downloader
 git clone https://github.com/muccc/gr-iridium
 
-mkdir -p /src/gr-iridium && mv gr-iridium/ /src/gr-iridium
+mkdir -p /src/gr-iridium && mv gr-iridium/ /src/
 cd /src/gr-iridium
 cmake -B build
 cmake --build build -j 2
