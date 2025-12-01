@@ -2,9 +2,7 @@
 
 set -euo pipefail
 
-DEBIAN_FRONTEND=noninteractive
-apt update
-apt install -y \
+apt update && DEBIAN_FRONTEND=noninteractive apt install -y \
   gnuradio-dev \
   gr-osmosdr \
   cmake \
