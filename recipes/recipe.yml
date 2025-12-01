@@ -42,6 +42,7 @@ modules:
     repos:
       copr:
         - atim/starship
+        - @meshtastic/beta
     install:
       packages:
         - micro
@@ -77,6 +78,7 @@ modules:
         - btop
         - docker-buildx
         - docker-compose
+        - meshtasticd
   - type: copy
     from: gr-gsm
     src: /out/gr-gsm
