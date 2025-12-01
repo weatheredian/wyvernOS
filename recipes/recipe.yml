@@ -24,14 +24,14 @@ stages:
           - mkdir -p /out/ && mv /src/ /out/blue-hydra   #copy script src to /out/
         scripts:
           - build-blue-hydra.sh
-  #- name: gr-iridium
-   # from: ubuntu:22.04
-    #modules:
-     # - type: script
-      #  snippets:
-       #   - mkdir -p /out/ && mv /src/ /out/gr-iridium
-        #scripts:
-         # - build-grIridium.sh
+  - name: gr-iridium
+    from: ubuntu:22.04
+    modules:
+      - type: script
+        snippets:
+          - mkdir -p /out/ && mv /src/ /out/gr-iridium
+        scripts:
+          - build-grIridium.sh
 
 modules:
   - type: files
@@ -89,10 +89,10 @@ modules:
     src: /out/blue-hydra
     dest: /usr/bin/
 
-  #- type: copy
-   # from: gr-iridium
-    #src: /out/gr-iridium
-    #dest: /usr/bin/
+  - type: copy
+    from: gr-iridium
+    src: /out/gr-iridium
+    dest: /usr/bin/
 
   - type: default-flatpaks
     configurations:
