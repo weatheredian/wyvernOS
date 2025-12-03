@@ -32,6 +32,14 @@ stages:
           - mkdir -p /out/ && mv /src/ /out/gr-iridium
         scripts:
           - build-grIridium.sh
+  - name: gr-tenna
+    from: ubuntu:22.04
+    modules:
+      - type: script
+        snippets:
+          - mkdir -p /out/ && mv /src/ /out/gr-tenna
+        scripts:
+          - build-grTenna.sh
 
 modules:
   - type: files
@@ -96,6 +104,11 @@ modules:
   - type: copy
     from: gr-iridium
     src: /out/gr-iridium
+    dest: /usr/bin/
+
+  - type: copy
+    from: gr-tenna
+    src: /out/gr-tenna
     dest: /usr/bin/
 
   - type: default-flatpaks
