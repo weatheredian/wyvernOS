@@ -80,6 +80,7 @@ modules:
         - docker-compose
         - meshtasticd
         - vlc
+        - pipx
   - type: copy
     from: gr-gsm
     src: /out/gr-gsm
