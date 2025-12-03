@@ -40,6 +40,14 @@ stages:
           - mkdir -p /out/ && mv /src/ /out/gr-tenna
         scripts:
           - build-grTenna.sh
+  - name: ice9bt
+    from: ubuntu:22.04
+    modules:
+      - type: script
+        snippets:
+          - mkdir -p /out/ && mv /src/ /out/ice9-bluetooth-sniffer
+        scripts:
+          - build-ice9bt.sh
 
 modules:
   - type: files
@@ -109,6 +117,11 @@ modules:
   - type: copy
     from: gr-tenna
     src: /out/gr-tenna
+    dest: /usr/bin/
+
+  - type: copy
+    from: ice9bt
+    src: /out/ice9-bluetooth-sniffer
     dest: /usr/bin/
 
   - type: default-flatpaks
