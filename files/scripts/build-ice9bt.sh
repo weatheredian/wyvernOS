@@ -9,6 +9,8 @@ apt update && DEBIAN_FRONTEND=noninteractive apt install -y \
   libfftw3-dev \
   cmake \
   xxd \
+  bladerf \
+  libbladerf-dev \
   git
 
 git clone https://github.com/mikeryan/ice9-bluetooth-sniffer.git
