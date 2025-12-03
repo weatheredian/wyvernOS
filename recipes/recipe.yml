@@ -79,6 +79,7 @@ modules:
         - docker-buildx
         - docker-compose
         - meshtasticd
+        - vlc
   - type: copy
     from: gr-gsm
     src: /out/gr-gsm
