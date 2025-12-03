@@ -81,6 +81,7 @@ modules:
         - meshtasticd
         - vlc
         - pipx
+        - bluez
   - type: copy
     from: gr-gsm
     src: /out/gr-gsm
