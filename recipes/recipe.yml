@@ -142,5 +142,6 @@ modules:
           - com.github.rafostar.Clapper
           - org.gnome.Loupe
           - app.zen_browser.zen
+          - org.meshtastic.meshtasticd
   - type: signing
 
