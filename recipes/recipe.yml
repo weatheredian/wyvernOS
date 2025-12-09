@@ -59,6 +59,7 @@ modules:
       copr:
         - atim/starship
         - "@meshtastic/beta"
+        - ikurniawan/RfCat
     install:
       packages:
         - micro
@@ -102,6 +103,7 @@ modules:
         - doxygen
         - python3
         - python3-pip
+        - rfcat
   - type: copy
     from: gr-gsm
     src: /out/gr-gsm
