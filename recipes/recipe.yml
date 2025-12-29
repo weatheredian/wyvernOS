@@ -69,6 +69,7 @@ modules:
       packages:
         - micro
         - starship
+        - zsh
         - neovim
         - fastfetch
         - kismet
@@ -106,6 +107,8 @@ modules:
         - bluez
         - doxygen
         - zsh
+        - python3
+        - python3-pip
   - type: copy
     from: gr-gsm
     src: /out/gr-gsm
@@ -148,5 +151,6 @@ modules:
           - com.github.rafostar.Clapper
           - org.gnome.Loupe
           - app.zen_browser.zen
+          - org.meshtastic.meshtasticd
   - type: signing
 
