@@ -4,7 +4,8 @@ set -euo pipefail
 
 apt-get update && DEBIAN_FRONTEND=noninteractive && apt-get install -y \
   qt5ct \
-  qt5-qmake
+  qt5-qmake \
+  git
 
 git clone https://github.com/collin80/SavvyCAN.git
 mkdir -p /src/ && cp -r SavvyCAN/ /src/
