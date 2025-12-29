@@ -48,6 +48,12 @@ stages:
           - mkdir -p /out/ && mv /src/ /out/ice9-bluetooth-sniffer
         scripts:
           - build-ice9bt.sh
+  - name: tailscale
+    from: ubuntu:22.04
+    modules:
+      - type: script
+        snippets:
+          - curl -fsSL https://tailscale.com/install.sh | sh
 
 modules:
   - type: files
