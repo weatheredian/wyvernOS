@@ -114,6 +114,7 @@ modules:
         - bluez
         - doxygen
         - zsh
+        - nmap
   - type: copy
     from: gr-gsm
     src: /out/gr-gsm
