@@ -99,6 +99,7 @@ modules:
         - pipx
         - bluez
         - doxygen
+        - zsh
   - type: copy
     from: gr-gsm
     src: /out/gr-gsm
