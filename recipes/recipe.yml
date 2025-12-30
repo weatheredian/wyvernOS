@@ -90,7 +90,6 @@ modules:
         - atim/starship
         - "@meshtastic/beta"
         - mhuebner/gr-satellites-next
-        - lu3vea/qradiolink 
     install:
       packages:
         - micro
