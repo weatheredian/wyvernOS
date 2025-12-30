@@ -11,7 +11,8 @@ apt update && DEBIAN_FRONTEND=noninteractive apt install -y \
   libboost-all-dev \
   libcppunit-dev \
   liblog4cpp5-dev \
-  libsndfile1-dev
+  libsndfile1-dev \
+  python3
 
 git clone https://github.com/jcrona/gr-nfc.git
 mkdir -p /src/ && cp -r gr-nfc /src/
