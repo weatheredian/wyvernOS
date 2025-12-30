@@ -12,14 +12,15 @@ apt update && DEBIAN_FRONTEND=noninteractive apt install -y \
   libcppunit-dev \
   liblog4cpp5-dev \
   libsndfile1-dev \
-  python3
+  python3 \
+  python2
 
 git clone https://github.com/jcrona/gr-nfc.git
 mkdir -p /src/ && cp -r gr-nfc /src/
 cd /src/gr-nfc
 mkdir build
 cd build
-cmake -Wno-dev -DPYTHON_EXECUTABLE=/usr/bin/python3 ..
+cmake -Wno-dev -DPYTHON_EXECUTABLE=/usr/bin/python2 ..
 make
 make install
 ldconfig
