@@ -89,6 +89,7 @@ modules:
       copr:
         - atim/starship
         - "@meshtastic/beta"
+        - mhuebner/gr-satellites-next
     install:
       packages:
         - micro
