@@ -6,7 +6,8 @@ apt-get update && DEBIAN_FRONTEND=noninteractive && apt-get install -y \
   g++ \
   qt5ct \
   qt5-qmake \
-  git \
+  git
+add-apt-repository universe && apt-get update && DEBIAN_FRONTEND=noninteractive && apt-get install -y \
   libqt5gui5t64 \
   libqt5core5t64 \
   libqt5printsupport5t64 \
