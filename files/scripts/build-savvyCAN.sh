@@ -5,6 +5,7 @@ set -euo pipefail
 apt-get update && DEBIAN_FRONTEND=noninteractive && apt-get install -y \
   g++ \
   qt5ct \
+  qt5-default \
   qt5-qmake \
   git
 add-apt-repository universe && apt-get update && DEBIAN_FRONTEND=noninteractive && apt-get install -y \
