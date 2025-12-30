@@ -7,7 +7,11 @@ apt update && DEBIAN_FRONTEND=noninteractive apt install -y \
   gr-osmosdr \
   cmake \
   git \
-  swig
+  swig \
+  libboost-all-dev \
+  libcppunit-dev \
+  liblog4cpp5-dev \
+  libsndfile1-dev
 
 git clone https://github.com/jcrona/gr-nfc.git
 mkdir -p /src/ && cp -r gr-nfc /src/
