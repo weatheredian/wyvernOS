@@ -54,14 +54,14 @@ stages:
       - type: script
         snippets:
           - curl -fsSL https://tailscale.com/install.sh | sh
-  #- name: savvyCAN
-    #from: ubuntu:22.04
-    #modules:
-      #- type: script
-        #snippets:
-          #- mkdir -p /out/ && mv /src/ /out/SavvyCAN
-        #scripts:
-          #- build-savvyCAN.sh
+  - name: savvyCAN
+    from: ubuntu:22.04
+    modules:
+      - type: script
+        snippets:
+          - mkdir -p /out/ && mv /src/ /out/SavvyCAN
+        scripts:
+          - build-savvyCAN.sh
 
 modules:
   - type: files
@@ -140,10 +140,10 @@ modules:
     src: /out/ice9-bluetooth-sniffer
     dest: /usr/bin/
 
-  #- type: copy
-   # from: savvyCAN
-    #src: /out/SavvyCAN
-    #dest: /usr/bin/
+  - type: copy
+    from: savvyCAN
+    src: /out/SavvyCAN
+    dest: /usr/bin/
 
   - type: default-flatpaks
     configurations:
