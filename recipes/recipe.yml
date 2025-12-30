@@ -90,6 +90,7 @@ modules:
         - atim/starship
         - "@meshtastic/beta"
         - mhuebner/gr-satellites-next
+        - dl3yc/SigDigger 
     install:
       packages:
         - micro
