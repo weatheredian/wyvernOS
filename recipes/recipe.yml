@@ -24,6 +24,14 @@ stages:
           - mkdir -p /out/ && mv /src/ /out/gr-aoa
         scripts: 
           - build-grAOA.sh
+  - name: gr-nfc
+    from: ubuntu:22.04
+    modules: 
+      - type: script
+        snippets:
+          - mkdir -p /out/ && mv /src/ /out/gr-nfc
+        scripts:
+          - build-grNFC.sh
   - name: blue-hydra
     from: ubuntu:22.04
     modules:
@@ -146,6 +154,11 @@ modules:
   - type: copy
     from: ice9bt
     src: /out/ice9-bluetooth-sniffer
+    dest: /usr/bin/
+
+  - type: copy
+    from: gr-nfc
+    src: /out/gr-nfc
     dest: /usr/bin/
 
   #- type: copy
