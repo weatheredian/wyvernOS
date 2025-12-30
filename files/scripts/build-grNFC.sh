@@ -10,7 +10,7 @@ apt update && DEBIAN_FRONTEND=noninteractive apt install -y \
   swig
 
 git clone https://github.com/jcrona/gr-nfc.git
-mkdir -p /src/ && cp-r gr-nfc /src/
+mkdir -p /src/ && cp -r gr-nfc /src/
 cd /src/gr-nfc
 mkdir build
 cd build
