@@ -18,7 +18,7 @@ mkdir -p /src/ && cp -r gr-nfc /src/
 cd /src/gr-nfc
 mkdir build
 cd build
-cmake ..
+cmake -Wno-dev ..
 make
 make install
 ldconfig
