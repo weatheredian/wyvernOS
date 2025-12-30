@@ -16,6 +16,14 @@ stages:
           - mkdir -p /out/ && mv /src/ /out/gr-gsm
         scripts:
           - build-grgsm.sh
+  - name: gr-aoa
+    from: ubuntu:22.04
+    modules:  
+      - type: script
+        snippets:
+          - mkdir -p /out/ && mv /src/ /out/gr-aoa
+        scripts: 
+          - build-grAOA.sh
   - name: blue-hydra
     from: ubuntu:22.04
     modules:
@@ -144,6 +152,10 @@ modules:
     #from: savvyCAN
     #src: /out/SavvyCAN
     #dest: /usr/bin/
+  - type: copy
+    from: gr-aoa
+    src: /out/gr-aoa
+    dest: /usr/bin/
 
   - type: default-flatpaks
     configurations:
