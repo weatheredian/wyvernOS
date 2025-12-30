@@ -19,7 +19,7 @@ mkdir -p /src/ && cp -r gr-nfc /src/
 cd /src/gr-nfc
 mkdir build
 cd build
-cmake -Wno-dev ..
+cmake -Wno-dev -DPYTHON_EXECUTABLE=/usr/bin/python3 ..
 make
 make install
 ldconfig
