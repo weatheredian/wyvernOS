@@ -2,7 +2,7 @@
 # yaml-language-server: $schema=https://schema.blue-build.org/recipe-v1.json
 # image will be published to ghcr.io/<user>/<name>
 
-name: wyvernOS
+name: wyvernos
 description: immutable SDR system
 base-image: ghcr.io/ublue-os/silverblue-main
 image-version: 42
@@ -65,6 +65,7 @@ modules:
       copr:
         - atim/starship
         - "@meshtastic/beta"
+        # - ikurniawan/RfCat
     install:
       packages:
         - micro
@@ -109,6 +110,7 @@ modules:
         - zsh
         - python3
         - python3-pip
+        # - rfcat
   - type: copy
     from: gr-gsm
     src: /out/gr-gsm
@@ -152,5 +154,6 @@ modules:
           - org.gnome.Loupe
           - app.zen_browser.zen
           - org.meshtastic.meshtasticd
+          - com.vscodium.codium
   - type: signing
 
