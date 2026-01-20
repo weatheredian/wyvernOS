@@ -58,7 +58,7 @@ modules:
     repos:
       copr:
         - atim/starship
-        - "@meshtastic/beta"
+        # - "@meshtastic/beta"
         - ikurniawan/RfCat
     install:
       packages:
@@ -96,7 +96,7 @@ modules:
         - btop
         - docker-buildx
         - docker-compose
-        - meshtasticd
+        # - meshtasticd
         - vlc
         - pipx
         - bluez
@@ -146,7 +146,7 @@ modules:
           - com.github.rafostar.Clapper
           - org.gnome.Loupe
           - app.zen_browser.zen
-          - org.meshtastic.meshtasticd
+          # - org.meshtastic.meshtasticd
           - com.vscodium.codium
   - type: signing
 
