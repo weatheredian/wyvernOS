@@ -147,5 +147,6 @@ modules:
           - org.gnome.Loupe
           - app.zen_browser.zen
           - org.meshtastic.meshtasticd
+          - com.vscodium.codium
   - type: signing
 
