@@ -157,7 +157,7 @@ modules:
     install:
       - Dash to Dock
       - Blur my Shell
-      - system-monitor
+      # - system-monitor
       # - Desktop Icons NG (DING) 
   - type: signing
 
