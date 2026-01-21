@@ -148,5 +148,11 @@ modules:
           - app.zen_browser.zen
           - org.meshtastic.meshtasticd
           - com.vscodium.codium
+  - type: gnome-extensions
+    install:
+      - Dash to Dock
+      - Blur my Shell
+      - system-monitor
+      - Desktop Icons NG (DING) 
   - type: signing
 
