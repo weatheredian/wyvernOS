@@ -151,8 +151,8 @@ modules:
   - type: gnome-extensions
     install:
       - Dash to Dock
-      # - Blur my Shell
-      # - system-monitor
+      - Blur my Shell
+      - system-monitor
       # - Desktop Icons NG (DING) 
   - type: signing
 
