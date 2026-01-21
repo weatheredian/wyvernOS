@@ -50,6 +50,11 @@ stages:
           - build-ice9bt.sh
 
 modules:
+  - type: os-release
+    properties:
+      ID: wyvernos
+      Name: WyvernOS
+      PRETTY_NAME: WyvernOS Alpha
   - type: files
     files:
       - source: system
